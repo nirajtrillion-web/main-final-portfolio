@@ -33,7 +33,7 @@ export const projects: Project[] = [
     description: "Interactive storefront with a real-time product catalog, custom item ordering, and automated Supabase database ingestion.",
     tags: ["Next.js", "React", "Tailwind CSS", "Supabase DB", "Vercel"],
     liveUrl: "https://baker-shop-backend-8yd8.vercel.app/",
-    githubUrl: "https://github.com/nirajtrillion-web/apex-dental-studio",
+    githubUrl: "https://github.com/nirajtrillion-web/baker-shop",
     imagePath: "/images/baker-bliss.png",
     highlights: [
       "Independent Supabase backend & secure owner admin portal",

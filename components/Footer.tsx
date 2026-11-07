@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
         {/* Links & Back to top */}
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/nirajtrillion-web"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub Profile"
@@ -29,15 +29,16 @@ export const Footer: React.FC = () => {
             <Github className="h-4 w-4" />
           </a>
 
-          <a
-            href="https://linkedin.com"
+          {/* LinkedIn Profile (uncomment and add your direct profile URL when ready) */}
+          {/* <a
+            href="https://linkedin.com/in/your-profile"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn Profile"
             className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:border-white/25 hover:bg-white/10 transition-all"
           >
             <Linkedin className="h-4 w-4" />
-          </a>
+          </a> */}
 
           <a
             href="#"

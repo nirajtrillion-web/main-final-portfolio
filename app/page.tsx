@@ -19,7 +19,7 @@ export default function HomePage() {
       <ProjectSection />
 
       {/* Philosophy / The Ownership Standard Section */}
-      <section id="about" className="relative w-full py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section id="about" className="relative w-full py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
         <div className="rounded-3xl border border-white/10 bg-gradient-to-b from-neutral-900/60 to-neutral-950/80 p-8 sm:p-12 backdrop-blur-xl">
           <div className="max-w-3xl mb-12">
             <span className="text-xs font-semibold tracking-wider uppercase text-cyan-400 mb-3 block">

@@ -94,8 +94,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
                 alt={`${project.title} screenshot preview`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                quality={85}
                 className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 priority={index === 0}
+                loading={index === 0 ? undefined : "lazy"}
               />
               {/* Subtle gradient vignette over the image */}
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent pointer-events-none opacity-40 group-hover:opacity-20 transition-opacity duration-300" />

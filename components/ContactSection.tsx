@@ -52,7 +52,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative w-full py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="contact" className="relative w-full py-24 sm:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-indigo-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
 
@@ -119,12 +119,25 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-neutral-500 font-semibold">Call / WhatsApp</div>
-                  <a
-                    href="tel:+919321194969"
-                    className="font-mono text-white hover:text-emerald-400 transition-colors"
-                  >
-                    +91 9321194969
-                  </a>
+                  <div className="flex items-center gap-2">
+                    <a
+                      href="https://wa.me/919321194969"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-white hover:text-emerald-400 transition-colors"
+                      title="Chat on WhatsApp"
+                    >
+                      +91 9321194969
+                    </a>
+                    <span className="text-neutral-600">/</span>
+                    <a
+                      href="tel:+919321194969"
+                      className="text-xs text-neutral-400 hover:text-emerald-400 transition-colors"
+                      title="Call directly"
+                    >
+                      (Call)
+                    </a>
+                  </div>
                 </div>
               </div>
 
