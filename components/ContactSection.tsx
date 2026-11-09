@@ -11,6 +11,7 @@ export const ContactSection: React.FC = () => {
     phone: "",
     projectType: "Business / Company Website",
     message: "",
+    honeypot: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -41,6 +42,7 @@ export const ContactSection: React.FC = () => {
         phone: "",
         projectType: "Business / Company Website",
         message: "",
+        honeypot: "",
       });
     } catch (err: unknown) {
       console.error("Submission error:", err);
@@ -197,6 +199,19 @@ export const ContactSection: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot field - hidden from human users to trap spam bots */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="company_website_url">Company Website</label>
+                  <input
+                    type="text"
+                    id="company_website_url"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={formState.honeypot}
+                    onChange={(e) => setFormState({ ...formState, honeypot: e.target.value })}
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Name */}
                   <div>
@@ -207,6 +222,7 @@ export const ContactSection: React.FC = () => {
                       type="text"
                       id="name"
                       required
+                      maxLength={100}
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       placeholder="Alex Morgan"
@@ -223,6 +239,7 @@ export const ContactSection: React.FC = () => {
                       type="email"
                       id="email"
                       required
+                      maxLength={254}
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="alex@company.com"
@@ -240,6 +257,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       type="tel"
                       id="phone"
+                      maxLength={30}
                       value={formState.phone}
                       onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
                       placeholder="+91 9321194969"
@@ -277,6 +295,7 @@ export const ContactSection: React.FC = () => {
                     id="message"
                     rows={4}
                     required
+                    maxLength={3000}
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     placeholder="Tell me about your timeline, tech stack needs, and key business goals..."
